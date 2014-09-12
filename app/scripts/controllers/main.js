@@ -8,7 +8,7 @@
 angular.module('mytodoApp')
 	.controller('MainCtrl', function($scope, localStorageService) {
 		var todosInStore = localStorageService.get('todos');
-		alert(todosInStore);
+		
 		$scope.todos = todosInStore && todosInStore.split('\n') || [];
 
 		$scope.$watch('todos', function () {
